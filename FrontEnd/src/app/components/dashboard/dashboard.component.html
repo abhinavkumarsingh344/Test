@@ -1,0 +1,44 @@
+
+<!-- <mat-toolbar color="primary">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Course App</span> -->
+ 
+  
+  
+  <button type="button" class="btn btn-primary" routerLink="add">Add</button>
+
+
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th class="item1">Name</th>
+        <th class="item1">Price</th>
+        <th class="item1">Rating</th>
+        <th class="item1">Category</th>
+        <th class="item1">Imagepath</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of Courses">
+       
+        <td class="item2">{{item.name}}</td>
+        <td class="item2">{{item.price}}</td>
+        <td class="item2">{{item.rating}}</td>
+        <td class="item2">{{item.category}}</td>
+        <td class="item2"><img src={{item.imagepath}} height="100" width="100"></td>
+
+        <td>
+            <a class="edit" title="edit"d data-bs-toggle="tooltip"(click)="gotoUpdateComponent(item.id)"><span class="material-icons">edit</span></a>
+            
+               </td>   
+               <td>
+                <a class="delete" title="delete"d data-bs-toggle="tooltip"(click)="gotoDeleteComponent(item.id)"><span class="material-icons">delete</span></a>
+                
+                   </td>  
+                  
+
+
+</tr>
+<p *ngIf="!Courses">No Courses are Found</p>

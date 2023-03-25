@@ -1,0 +1,67 @@
+
+<!-- <div class="login-Layout" >
+  <form [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm)" class="form-layout">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Enter Your Name" type="text" formControlName="name" name="ngModel" [(ngModel)]="login.name">
+      <mat-error *ngIf="loginForm.get('name')?.touched  && loginForm.get('name')?.hasError('required')">3 character required</mat-error>
+    </mat-form-field> 
+      <mat-form-field appearance="fill">
+        <mat-label>Enter Your Password</mat-label>
+        <input matInput placeholder="Abhinav@123" type="password" formControlName="password" name="password"[(ngModel)]="login.password">
+    </mat-form-field>
+    <button mat-raised-button color="primary" [disabled]="loginForm.invalid">Login</button>
+  </form>
+  </div>
+  -->
+
+<!-- Template Driven Form -->
+<div class="form-layout">
+  <div class="container">
+    <div class="screen">
+      <div class="screen__content">
+<form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm)" class="login">
+
+  
+    <div class="mb-3">
+     
+      <div class="login__field">
+        <i class="login__icon fas fa-user"></i>
+        <label for="exampleInputEmail1" class="form-label">Username</label>
+        <input type="text" class="form-control" id="name" required #name="ngModel" [(ngModel)]="login.name " name="name" ><br><br>
+       <span *ngIf="name.invalid && name.touched" style="color:red">
+           Name field is Reqired
+       </span>
+      </div>
+    </div>
+      <div class="mb-3">
+        <div class="login__field">
+					<i class="login__icon fas fa-lock"></i>
+          <label for="exampleInputEmail1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" name="password"[(ngModel)]="login.password" placeholder="enter your password" size="15">
+        </div> 
+        </div> 
+
+        <button [disabled]="loginForm.invalid" type="submit" class="btn btn-primary"   ><span class="button__text">Log In </span>	<i class="button__icon fas fa-chevron-right"></i></button>
+      
+      </form>
+      
+</div>
+<div class="social-login">
+  <h3>log in via</h3>
+  <div class="social-icons">
+    <a href="https://instagram.com" class="social-login__icon fab fa-instagram"  target="_blank"></a>
+    <a href="https://www.facebook.com/" class="social-login__icon fa fa-facebook-official"  target="_blank"></a>
+    <a href="https://twitter.com" class="social-login__icon fab fa-twitter"    target="_blank"></a>
+  </div>
+</div>
+<div class="screen__background">
+  <span class="screen__background__shape screen__background__shape4"></span>
+  <span class="screen__background__shape screen__background__shape3"></span>		
+  <span class="screen__background__shape screen__background__shape2"></span>
+  <span class="screen__background__shape screen__background__shape1"></span>
+</div>
+</div>		
+</div>		
+</div>
+

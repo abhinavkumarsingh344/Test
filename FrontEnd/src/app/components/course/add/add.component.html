@@ -1,0 +1,28 @@
+<p>edit works!</p>
+<div class="form-layout">
+<mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput [(ngModel)]="course.name">
+  </mat-form-field> 
+  <mat-form-field appearance="fill">
+    <mat-label>Price</mat-label>
+    <input matInput [(ngModel)]="course.price">
+  </mat-form-field> 
+  <mat-form-field appearance="fill">
+    <mat-label>Category</mat-label>
+    <input matInput [(ngModel)]="course.category">
+  </mat-form-field> 
+  <mat-form-field appearance="fill">
+    <mat-label>Rating</mat-label>
+    <input matInput [(ngModel)]="course.rating">
+  </mat-form-field> 
+  <mat-form-field appearance="fill">
+ 
+    <mat-label>Imagepath</mat-label>
+ 
+    <input matInput [(ngModel)]="course.imagepath" img mat-card-image src={{course.imagepath}} >
+  </mat-form-field> 
+  
+  <button mat-raised-button color="primary" (click)="AddCourse()">Add</button>
+
+</div>

@@ -1,0 +1,30 @@
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th >Name</th>
+        <th >Price</th>
+        <th >Rating</th>
+        <th >Category</th>
+        <th >Imagepath</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of Courses">
+       
+        <td class="item2">{{item.name}}</td>
+        <td class="item2">{{item.price}}</td>
+        <td class="item2">{{item.rating}}</td>
+        <td class="item2">{{item.category}}</td>
+        <td class="item2"><img src={{item.imagepath}} height="100" width="100"></td>
+
+        <td>
+          <button class="form-button">Buy Now</button>
+            <a class="edit" title="edit"d data-bs-toggle="tooltip"(click)="gotoAddToCartComponent()"><span class="material-icons">shopping_cart</span></a>
+            
+               </td>  
+               <!-- <td class="quantity">
+<button (click)="handlequantity('min')"></button>
+<input type="text" value="{{CourseQuantity}}" />
+<button (click)="handlequantity('plus')"></button>
+               </td>  -->
+            </tr>

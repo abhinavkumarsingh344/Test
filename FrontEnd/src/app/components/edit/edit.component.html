@@ -1,0 +1,29 @@
+<p>edit works!</p>
+<div class="form-layout">
+<mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput [(ngModel)]="user.name">
+  </mat-form-field> 
+  <mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput [(ngModel)]="user.password">
+  </mat-form-field> 
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput [(ngModel)]="user.email">
+  </mat-form-field> 
+  <mat-form-field appearance="fill">
+    <mat-label>Location</mat-label>
+    <input matInput [(ngModel)]="user.location">
+  </mat-form-field> 
+  <mat-form-field appearance="fill">
+    <mat-label>Imagepath</mat-label>
+    <input matInput [(ngModel)]="user.imagepath">
+  </mat-form-field> 
+  <mat-form-field appearance="fill">
+    <mat-label>Role</mat-label>
+    <input matInput [(ngModel)]="user.role">
+  </mat-form-field> 
+  
+  <button mat-raised-button color="primary" (click)="editUser()">Update</button>
+</div>

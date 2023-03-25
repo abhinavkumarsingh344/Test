@@ -1,0 +1,11 @@
+
+.reg-form{
+    display:flex;
+
+   justify-content: space-around;
+}
+.form-body{
+    display: flex;
+    flex-direction:column ;
+    justify-content: space-around;
+}

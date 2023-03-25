@@ -1,0 +1,52 @@
+<p>register works! register</p>
+
+
+
+<div class="reg-form"> 
+ 
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Personal data
+          </mat-panel-title>
+          <mat-panel-description>
+            Type your name and age
+            <mat-icon>account_circle</mat-icon>
+            
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+     
+        <div class="form-body">
+        <mat-form-field appearance="fill">
+            <mat-label>User Name</mat-label>
+            <input matInput type="text"  [(ngModel)]="user.name">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" required placeholder="Abhinav@123"  [(ngModel)]="user.password">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Enter your email</mat-label>
+            <input matInput type="email" required placeholder="pat@example.com"  [(ngModel)]="user.email">
+           
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Location</mat-label>
+            <input matInput type="text"  [(ngModel)]="user.location">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Imagepath</mat-label>
+            <input matInput type="text"  [(ngModel)]="user.imagepath">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Role</mat-label>
+            <input matInput type="text"  [(ngModel)]="user.role">
+
+          </mat-form-field>
+          <button mat-raised-button color="primary" (click)="registerUser()">Register</button>
+          
+    </div>
+        </mat-expansion-panel>
+      
+
+</div>

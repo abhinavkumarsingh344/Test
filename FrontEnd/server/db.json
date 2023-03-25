@@ -1,0 +1,20 @@
+
+{
+    "Courses":[
+        {
+        "id":1,
+        "name":"Java",
+        "rating":4.2
+    },
+    {
+        "id":2,
+        "name":"Python",
+        "rating":4.3
+    },
+    {
+        "id":3,
+        "name":"Angular",
+        "rating":4.4
+    }
+]
+}
